@@ -29,7 +29,7 @@
         android:id="@+id/hintButton"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="107dp"/>
+        />
 
     <TextView
         android:layout_width="wrap_content"
@@ -37,9 +37,9 @@
         android:id="@+id/descriptionLabel"
         android:layout_below="@+id/moreInfoTitle"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="75dp"
+
         android:textColor="@android:color/black"
-        android:textSize="35sp"/>
+        android:textSize="25sp"/>
 
     <ImageView
         android:layout_width="wrap_content"
@@ -47,6 +47,7 @@
         android:id="@+id/descriptionImage"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
+        android:layout_below="@+id/descriptionLabel"
         android:src="@drawable/confused_smiley"/>
 
 
