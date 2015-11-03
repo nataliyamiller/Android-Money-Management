@@ -1,16 +1,84 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
                 xmlns:tools="http://schemas.android.com/tools"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:paddingLeft="@dimen/activity_horizontal_margin"
                 android:paddingRight="@dimen/activity_horizontal_margin"
                 android:paddingTop="@dimen/activity_vertical_margin"
                 android:paddingBottom="@dimen/activity_vertical_margin"
-                tools:context=".MainActivity">
+                tools:context=".MainActivity"
+              >
 
     <TextView
-        android:text="@string/hello_world"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Where Did My Money Go?"
+        android:id="@+id/logoText"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textColor="#1f0eff"
+        android:typeface="serif"
+        android:textColorHighlight="@android:color/darker_gray"
+        android:textSize="50sp"
+        android:gravity="center_horizontal"
+        style="@style/TextAppearance.AppCompat.Title"
+        android:background="@color/material_grey_300"
+        android:inputType="none"
+        android:singleLine="false"
+        android:textStyle="bold"
+        android:layout_alignParentBottom="false"/>
+
+    <ImageView
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:id="@+id/moneyLabel"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/logoText"
+        android:src="@drawable/small_amounts_of_money"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/info"
+        android:id="@+id/introLabel"
+        android:gravity="center_horizontal"
+        android:layout_marginBottom="42dp"
+        android:layout_centerHorizontal="true"
+        android:textStyle="bold"
+        android:textSize="25sp"
+        android:foregroundGravity="left"
+        android:layout_below="@+id/moneyLabel"/>
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="More Info"
+        android:id="@+id/moreInfoButton"
+        android:layout_below="@+id/introLabel"
+
+       />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="login to your account"
+        android:id="@+id/loginButton"
+        android:layout_below="@+id/moreInfoButton"
+        android:layout_centerHorizontal="true"
+       />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Register new account"
+        android:id="@+id/registerButton"
+        android:gravity="center|center_horizontal"
+        android:layout_below="@+id/loginButton"/>
 
 </RelativeLayout>

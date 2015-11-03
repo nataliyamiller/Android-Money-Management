@@ -3,4 +3,12 @@
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="intro_description">Your personal and business money management system</string>
+    <string name="title_activity_more_info">MoreInfoActivity</string>
+    <string name="moreInfo">About This Money Management Application</string>
+    <string name="infoDescription">This application can help you to answer the most important question that you possibly ask yourself every single month\n
+    "Where did my money go again??" Start managing your business and personal daily expenses like mileage, groceries, gifts, etc.
+    </string>
+    <string name="title_activity_info">InfoActivity</string>
+    <string name="info">Your personal and business money management system</string>
 </resources>
