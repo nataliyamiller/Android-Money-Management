@@ -36,7 +36,7 @@ public class RegisterActivity extends AppCompatActivity {
                 String email = mEmailEditText.getText().toString();
 
                 User user = new User(username, password, email);
-                Intent intent = new Intent(RegisterActivity.this, MainActivity.class);
+                Intent intent = new Intent(RegisterActivity.this, CategoryActivity.class);
                 startActivity(intent);
             }
         });

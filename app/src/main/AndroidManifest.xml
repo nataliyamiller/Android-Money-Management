@@ -3,6 +3,7 @@
     package="com.epicodus.moneymanagement" >
 
     <application
+        android:name="com.activeandroid.app.Application"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -51,6 +52,8 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.epicodus.moneymanagement.ui.MainActivity" />
         </activity>
+        <meta-data android:name="AA_DB_NAME" android:value="Money.db" />
+        <meta-data android:name="AA_DB_VERSION" android:value="1" />
     </application>
 
 </manifest>

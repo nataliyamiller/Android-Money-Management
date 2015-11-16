@@ -11,6 +11,7 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import com.epicodus.moneymanagement.R;
+import com.epicodus.moneymanagement.models.Expense;
 
 import java.util.ArrayList;
 
@@ -29,6 +30,10 @@ public class CategoryActivity extends ListActivity {
         mNewExpenseText = (EditText) findViewById(R.id.newExpenseText);
         mExpenses = new ArrayList<String>();
         mAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, mExpenses);
+         for ( Expense expense : Expense.all() ) {
+             mExpenses.add(expense.getDescription());
+         }
+
         setListAdapter(mAdapter);
 
         mNewExpenseButton.setOnClickListener(new View.OnClickListener() {
@@ -41,8 +46,10 @@ public class CategoryActivity extends ListActivity {
     }
 
     private void addExpense() {
-        String newExpense = mNewExpenseText.getText().toString();
-        mExpenses.add(newExpense);
+        String description = mNewExpenseText.getText().toString();
+        Expense newExpense = new Expense(description);
+        newExpense.save();
+        mExpenses.add(description);
         mAdapter.notifyDataSetChanged();
     }
 
