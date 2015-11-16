@@ -1,5 +1,6 @@
 package com.epicodus.moneymanagement.ui;
 
+import android.content.Intent;
 import android.media.Image;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -19,6 +20,7 @@ public class InfoActivity extends AppCompatActivity {
     private TextView mDescriptionLabel;
     private ImageView mDescriptionImage;
     private Button mHintButton;
+    private Button mRegisterInfoButton;
 
     private InfoLib mInfoLib;
     private MoreInfo mCurrentInfo;
@@ -33,6 +35,7 @@ public class InfoActivity extends AppCompatActivity {
         mDescriptionLabel = (TextView) findViewById(R.id.descriptionLabel);
         mDescriptionImage = (ImageView) findViewById(R.id.descriptionImage);
         mHintButton = (Button) findViewById(R.id.hintButton);
+        mRegisterInfoButton = (Button) findViewById(R.id.registerInfoButton);
 
         mInfoLib = new InfoLib();
         mCurrentInfo = mInfoLib.getMoreInfos().get(0);
@@ -44,6 +47,14 @@ public class InfoActivity extends AppCompatActivity {
             public void onClick(View v) {
                 mCurrentInfo = mInfoLib.nextInfo(mCurrentInfo);
                 setLayoutContent();
+            }
+        });
+
+        mRegisterInfoButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(InfoActivity.this, RegisterActivity.class);
+                startActivity(intent);
             }
         });
 

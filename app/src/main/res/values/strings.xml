@@ -11,4 +11,7 @@
     </string>
     <string name="title_activity_info">InfoActivity</string>
     <string name="info">Your personal and business money management system</string>
+    <string name="title_activity_register">RegisterActivity</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="title_activity_category">CategoryActivity</string>
 </resources>

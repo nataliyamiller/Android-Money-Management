@@ -42,7 +42,7 @@ public class InfoLib {
 
 
         mMoreInfos.add(new MoreInfo(
-                "Register for free to use our money management application and be on top of your monthly expenses!",
+                "User for free to use our money management application and be on top of your monthly expenses!",
                 R.drawable.smiley_two
         ));
 
