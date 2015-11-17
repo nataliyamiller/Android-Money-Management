@@ -1,0 +1,1 @@
+ALTER TABLE Expenses ADD COLUMN Category int;

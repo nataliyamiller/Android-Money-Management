@@ -11,29 +11,37 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import com.epicodus.moneymanagement.R;
+import com.epicodus.moneymanagement.models.Category;
 import com.epicodus.moneymanagement.models.Expense;
 
 import java.util.ArrayList;
 
 public class CategoryActivity extends ListActivity {
+    private Category mCategory;
     private ArrayList<String> mExpenses;
     private Button mNewExpenseButton;
     private EditText mNewExpenseText;
     private ArrayAdapter<String> mAdapter;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_category);
 
+        String name = getIntent().getStringExtra("categoryName");
+        mCategory = Category.find(name);
+
+
         mNewExpenseButton = (Button) findViewById(R.id.newExpenseButton);
         mNewExpenseText = (EditText) findViewById(R.id.newExpenseText);
-        mExpenses = new ArrayList<String>();
-        mAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, mExpenses);
-         for ( Expense expense : Expense.all() ) {
-             mExpenses.add(expense.getDescription());
-         }
 
+        mExpenses = new ArrayList<String>();
+        for (Expense expense : mCategory.expenses() ) {
+            mExpenses.add(expense.getDescription());
+        }
+
+        mAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, mExpenses);
         setListAdapter(mAdapter);
 
         mNewExpenseButton.setOnClickListener(new View.OnClickListener() {
@@ -47,31 +55,11 @@ public class CategoryActivity extends ListActivity {
 
     private void addExpense() {
         String description = mNewExpenseText.getText().toString();
-        Expense newExpense = new Expense(description);
+        Expense newExpense = new Expense(description, mCategory);
         newExpense.save();
         mExpenses.add(description);
         mAdapter.notifyDataSetChanged();
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_category, menu);
-        return true;
-    }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
 }

@@ -14,6 +14,22 @@ import java.util.List;
 @Table(name = "Expenses", id = "_id")
 public class Expense extends Model {
 
+    @Column(name = "Description")
+    private String mDescription;
+
+    @Column(name = "Category")
+    private Category mCategory;
+
+    public Expense() {
+        super();
+    }
+
+    public Expense(String description, Category category) {
+        super();
+        mDescription = description;
+        mCategory = category;
+    }
+
     public String getDescription() {
         return mDescription;
     }
@@ -22,17 +38,6 @@ public class Expense extends Model {
         mDescription = description;
     }
 
-    @Column(name = "Description")
-    private String mDescription;
-
-    public Expense() {
-        super();
-    }
-
-    public Expense(String description) {
-        super();
-        mDescription = description;
-    }
 
     public static List<Expense> all() {
         return new Select().from(Expense.class).execute();

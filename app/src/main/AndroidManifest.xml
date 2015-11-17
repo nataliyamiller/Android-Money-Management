@@ -52,8 +52,23 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.epicodus.moneymanagement.ui.MainActivity" />
         </activity>
-        <meta-data android:name="AA_DB_NAME" android:value="Money.db" />
-        <meta-data android:name="AA_DB_VERSION" android:value="1" />
+
+
+
+        <activity
+            android:name=".ui.MainUserActivity"
+            android:label="@string/title_activity_main_user"
+            android:parentActivityName=".ui.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.epicodus.moneymanagement.ui.MainActivity" />
+        </activity>
+        <meta-data
+            android:name="AA_DB_NAME"
+            android:value="Money.db" />
+        <meta-data
+            android:name="AA_DB_VERSION"
+            android:value="2" />
     </application>
 
 </manifest>
