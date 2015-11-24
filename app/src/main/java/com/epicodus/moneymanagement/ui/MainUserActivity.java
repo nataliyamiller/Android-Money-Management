@@ -15,6 +15,7 @@ import android.widget.ListView;
 import com.epicodus.moneymanagement.R;
 import com.epicodus.moneymanagement.models.Category;
 import com.epicodus.moneymanagement.models.Expense;
+import com.parse.ParseAnalytics;
 
 import java.util.ArrayList;
 
@@ -29,6 +30,8 @@ public class MainUserActivity extends ListActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_user);
+
+            ParseAnalytics.trackAppOpenedInBackground(getIntent());
 
             Expense newExpense = new Expense();
             newExpense.save();

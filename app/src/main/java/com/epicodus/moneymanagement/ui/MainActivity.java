@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.epicodus.moneymanagement.R;
+import com.parse.ParseAnalytics;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -43,6 +44,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        ParseAnalytics.trackAppOpenedInBackground(getIntent());
 
         mLoginButton = (Button) findViewById(R.id.loginButton);
         mRegisterButton = (Button) findViewById(R.id.registerButton);
