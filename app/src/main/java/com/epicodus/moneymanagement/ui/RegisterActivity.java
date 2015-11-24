@@ -11,10 +11,10 @@ import com.epicodus.moneymanagement.R;
 
 
 public class RegisterActivity extends AppCompatActivity {
-    private EditText mUserNameEditText;
-    private EditText mPasswordEditText;
-    private EditText mEmailEditText;
-    private Button mRegisterLabelButton;
+    private EditText mUsernameField;
+    private EditText mPasswordField;
+    private EditText mEmailField;
+    private Button mSignupButton;
 
 
 
@@ -23,10 +23,10 @@ public class RegisterActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
 
-        mUserNameEditText = (EditText) findViewById(R.id.userNameEditText);
-        mPasswordEditText = (EditText) findViewById(R.id.passwordEditText);
-        mEmailEditText = (EditText) findViewById(R.id.emailEditText);
-        mRegisterLabelButton = (Button) findViewById(R.id.registerLabelButton);
+        mUsernameField = (EditText) findViewById(R.id.usernameField);
+        mPasswordField = (EditText) findViewById(R.id.passwordField);
+        mEmailField = (EditText) findViewById(R.id.emailField);
+        mSignupButton = (Button) findViewById(R.id.signupButton);
 
 //        mRegisterLabelButton.setOnClickListener(new View.OnClickListener() {
 //            @Override

@@ -19,4 +19,6 @@
     <string name="username_hint">Username</string>
     <string name="password_hint">Password</string>
     <string name="login_button">Login</string>
+    <string name="sign_up_button_label">Sign Up!</string>
+    <string name="email_hint">Email</string>
 </resources>

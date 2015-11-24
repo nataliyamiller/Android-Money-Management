@@ -2,8 +2,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.epicodus.moneymanagement" >
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
     <application
-        android:name="com.activeandroid.app.Application"
+        android:name=".parse.MoneyManagementApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -30,7 +33,7 @@
         <activity
             android:name=".ui.RegisterActivity"
             android:label="@string/title_activity_register"
-            android:parentActivityName=".ui.MainActivity"
+            android:parentActivityName=".ui.LoginActivity"
             android:screenOrientation="portrait" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -39,7 +42,8 @@
         <activity
             android:name=".ui.LoginActivity"
             android:label="@string/title_activity_login"
-            android:parentActivityName=".ui.MainActivity" >
+            android:parentActivityName=".ui.MainActivity"
+            android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.epicodus.moneymanagement.ui.MainActivity" />
@@ -47,7 +51,8 @@
         <activity
             android:name=".ui.CategoryActivity"
             android:label="@string/title_activity_category"
-            android:parentActivityName=".ui.MainActivity" >
+            android:parentActivityName=".ui.MainActivity"
+            >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.epicodus.moneymanagement.ui.MainActivity" />

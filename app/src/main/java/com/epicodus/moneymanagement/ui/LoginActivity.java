@@ -15,7 +15,7 @@ public class LoginActivity extends AppCompatActivity {
 
     Button mLoginButton;
     EditText mUsername, mPassword;
-    TextView mSignUpText;
+    protected TextView mSignUpTextView;
 
 
     @Override
@@ -26,27 +26,15 @@ public class LoginActivity extends AppCompatActivity {
         mUsername = (EditText) findViewById(R.id.usernameField);
         mPassword = (EditText) findViewById(R.id.passwordField);
         mLoginButton = (Button) findViewById(R.id.loginButton);
-        mSignUpText = (TextView) findViewById(R.id.signUpText);
-//        mSessionManager = new SessionManager(this);
+        mSignUpTextView = (TextView) findViewById(R.id.signUpText);
 
-//        mLoginButton.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                User user = new User(null, null);
-//                mSessionManager.storeUserData(user);
-//                mSessionManager.setUserLoggedIn(true);
-//                }
-//        });
-//
-//        mRegisterLink.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
-//                startActivity(intent);
-//
-//            }
-//        });
-//
-//
+        mSignUpTextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
+                startActivity(intent);
+            }
+        });
+
    }
 }
