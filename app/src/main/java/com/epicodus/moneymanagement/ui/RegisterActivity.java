@@ -8,7 +8,7 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import com.epicodus.moneymanagement.R;
-import com.epicodus.moneymanagement.models.User;
+
 
 public class RegisterActivity extends AppCompatActivity {
     private EditText mUserNameEditText;
@@ -16,7 +16,7 @@ public class RegisterActivity extends AppCompatActivity {
     private EditText mEmailEditText;
     private Button mRegisterLabelButton;
 
-    private User mUser;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,18 +28,18 @@ public class RegisterActivity extends AppCompatActivity {
         mEmailEditText = (EditText) findViewById(R.id.emailEditText);
         mRegisterLabelButton = (Button) findViewById(R.id.registerLabelButton);
 
-        mRegisterLabelButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String username = mUserNameEditText.getText().toString();
-                String password = mPasswordEditText.getText().toString();
-                String email = mEmailEditText.getText().toString();
-
-                User user = new User(username, password, email);
-                Intent intent = new Intent(RegisterActivity.this, MainUserActivity.class);
-                startActivity(intent);
-            }
-        });
-    }
+//        mRegisterLabelButton.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                String username = mUserNameEditText.getText().toString();
+//                String password = mPasswordEditText.getText().toString();
+//                String email = mEmailEditText.getText().toString();
+//
+//                User user = new User(username, password, email);
+//                Intent intent = new Intent(RegisterActivity.this, MainUserActivity.class);
+//                startActivity(intent);
+//            }
+//        });
+   }
 
 }

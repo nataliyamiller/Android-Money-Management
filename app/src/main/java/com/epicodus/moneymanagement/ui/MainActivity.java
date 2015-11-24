@@ -7,15 +7,14 @@ import android.view.View;
 import android.widget.Button;
 
 import com.epicodus.moneymanagement.R;
-import com.epicodus.moneymanagement.models.SessionManager;
-import com.epicodus.moneymanagement.models.User;
+
 
 public class MainActivity extends AppCompatActivity {
 
     private Button mLoginButton;
     private Button mRegisterButton;
     private Button mMoreInfoButton;
-    SessionManager mSessionManager;
+//    SessionManager mSessionManager;
     Button mLogoutButton;
 
 
@@ -29,9 +28,9 @@ public class MainActivity extends AppCompatActivity {
 //        }
 //    }
 
-    private boolean authenticateUser() {
-        return mSessionManager.getUserLoggedIn();
-    }
+//    private boolean authenticateUser() {
+//        return mSessionManager.getUserLoggedIn();
+//    }
 
 //    private void displayUserDetails() {
 //        User user = mSessionManager.getLoggedInUser();
@@ -49,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
         mRegisterButton = (Button) findViewById(R.id.registerButton);
         mMoreInfoButton = (Button) findViewById(R.id.moreInfoButton);
 //        mLogoutButton = (Button) findViewById(R.id.logoutButton);
-        mSessionManager = new SessionManager(this);
+//        mSessionManager = new SessionManager(this);
 
         mMoreInfoButton.setOnClickListener(new View.OnClickListener() {
             @Override

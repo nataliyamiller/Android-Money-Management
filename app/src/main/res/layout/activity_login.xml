@@ -24,30 +24,30 @@
         android:layout_height="wrap_content"
         android:inputType="text"
         android:ems="10"
-        android:id="@+id/loginNameText"
+        android:id="@+id/usernameField"
         android:layout_centerVertical="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:hint="Username"
-        android:maxLength="50"/>
+        android:maxLength="50"
+        android:hint="@string/username_hint"/>
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textPassword"
         android:ems="10"
-        android:id="@+id/loginPasswordText"
-        android:layout_below="@+id/loginNameText"
+        android:id="@+id/passwordField"
+        android:layout_below="@+id/usernameField"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:hint="Password"/>
+        android:hint="@string/password_hint"/>
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Login"
+        android:text="@string/login_button"
         android:id="@+id/loginButton"
-        android:layout_below="@+id/loginPasswordText"
+        android:layout_below="@+id/passwordField"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_marginTop="59dp"/>
@@ -57,8 +57,8 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:textStyle="bold"
-        android:id="@+id/registerLink"
-        android:text="Register Here"/>
+        android:id="@+id/signUpText"
+        android:text="@string/sign_up_text"/>
 
     <FrameLayout
         android:layout_width="match_parent"

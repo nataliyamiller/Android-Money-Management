@@ -15,4 +15,8 @@
     <string name="title_activity_login">LoginActivity</string>
     <string name="title_activity_category">CategoryActivity</string>
     <string name="title_activity_main_user">MainUserActivity</string>
+    <string name="sign_up_text">Not yet registered? Click here to sign up!</string>
+    <string name="username_hint">Username</string>
+    <string name="password_hint">Password</string>
+    <string name="login_button">Login</string>
 </resources>
