@@ -18,9 +18,6 @@ public class MoneyManagementApplication extends Application {
 
         Parse.initialize(this, "2dYPdH4gh3s2svE3ERcONQLdUAml4WQ4zIkHCRGQ", "pcuoyZ34lLfNfnBpaWeneqbf8nIL3Tp1GoNiKtTn");
 
-        ParseObject testObject = new ParseObject("TestObject");
-        testObject.put("foo", "bar");
-        testObject.saveInBackground();
 
     }
 }

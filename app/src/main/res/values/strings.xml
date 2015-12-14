@@ -21,4 +21,13 @@
     <string name="login_button">Login</string>
     <string name="sign_up_button_label">Sign Up!</string>
     <string name="email_hint">Email</string>
+    <string name="sign_up_error_message">Please do not leave any of the fields blank</string>
+    <string name="sign_up_error_title">Oops!</string>
+    <string name="login_error_message">Please make sure you enter username and password</string>
+    <string name="login_error_title">Oops!</string>
+    <string name="title_section1">Inbox</string>
+    <string name="title_section2">Categories</string>
+    <string name="menu_logout_label">Logout</string>
+    <string name="empty_inbox_label">Empty Inbox</string>
+    <string name="empty_categories_label">Add categories to begin</string>
 </resources>

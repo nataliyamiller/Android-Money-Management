@@ -20,10 +20,11 @@ import com.parse.ParseAnalytics;
 import java.util.ArrayList;
 
 public class MainUserActivity extends ListActivity {
-        private ArrayList<String> mCategories;
-        private Button mNewCategoryButton;
-        private EditText mNewCategoryText;
-        private ArrayAdapter<String> mAdapter;
+    public static final String TAG = MainActivity.class.getSimpleName();
+//        private ArrayList<String> mCategories;
+//        private Button mNewCategoryButton;
+//        private EditText mNewCategoryText;
+//        private ArrayAdapter<String> mAdapter;
 
 
         @Override
@@ -33,47 +34,47 @@ public class MainUserActivity extends ListActivity {
 
             ParseAnalytics.trackAppOpenedInBackground(getIntent());
 
-            Expense newExpense = new Expense();
-            newExpense.save();
+//            Expense newExpense = new Expense();
+//            newExpense.save();
+//
+//
+//            mNewCategoryButton = (Button) findViewById(R.id.newCategoryButton);
+//            mNewCategoryText = (EditText) findViewById(R.id.newCategoryText);
+//
+//            mCategories = new ArrayList<String>();
+//            for (Category category : Category.all()) {
+//                mCategories.add(category.getName());
+//            }
 
 
-            mNewCategoryButton = (Button) findViewById(R.id.newCategoryButton);
-            mNewCategoryText = (EditText) findViewById(R.id.newCategoryText);
+//            mAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, mCategories);
+//            setListAdapter(mAdapter);
+//
+//            mNewCategoryButton.setOnClickListener(new View.OnClickListener() {
+//                @Override
+//                public void onClick(View v) {
+//                    addCategory();
+//                }
+//            });
+//        }
 
-            mCategories = new ArrayList<String>();
-            for (Category category : Category.all()) {
-                mCategories.add(category.getName());
-            }
+//    private void addCategory() {
+//        String name =  mNewCategoryText.getText().toString();
+//        Category category = new Category(name);
+//        category.save();
+//        mCategories.add(name);
+//        mAdapter.notifyDataSetChanged();
+//    }
 
+//        @Override
+//        protected void onListItemClick(ListView l, View v, int position, long id) {
+//            super.onListItemClick(l, v, position, id);
+//            String thisCategoryName = mCategories.get(position);
+//            Intent intent = new Intent(this, CategoryActivity.class);
+//            intent.putExtra("categoryName", thisCategoryName);
+//            startActivity(intent);
+       }
 
-            mAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, mCategories);
-            setListAdapter(mAdapter);
-
-            mNewCategoryButton.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    addCategory();
-                }
-            });
-        }
-
-        private void addCategory() {
-            String name =  mNewCategoryText.getText().toString();
-            Category category = new Category(name);
-            category.save();
-            mCategories.add(name);
-            mAdapter.notifyDataSetChanged();
-        }
-
-        @Override
-        protected void onListItemClick(ListView l, View v, int position, long id) {
-            super.onListItemClick(l, v, position, id);
-            String thisCategoryName = mCategories.get(position);
-            Intent intent = new Intent(this, CategoryActivity.class);
-            intent.putExtra("categoryName", thisCategoryName);
-            startActivity(intent);
-        }
-
-    }
+   }
 
 
